@@ -10,6 +10,17 @@ GPIO.setup(18, GPIO.OUT)
 def index():
     return 'Hello world'
 
+@app.route('/',methods=['GET'])
+def test():
+    status = request.args.get('status')
+    if status == "on":
+        GPIO.output(18, GPIO.HIGH)
+        return "light on"
+    elif status == "off"
+        GPIO.output(18, GPIO.LOW)
+        return "light off"
+    else:
+        return "uh oh"
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
-    GPIO.output(18, GPIO.HIGH)
