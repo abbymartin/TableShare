@@ -1,8 +1,10 @@
 function handleSelection() {
     var selectElement = document.getElementById("occupancy");
     var selectedValue = selectElement.value;
-    var table = document.getElementById("table");
-
+    var table = document.getElementById("rectangle");
+    var popup = document.getElementById("popup");
+    popup.style.visibility = "visible";
+    
     // Perform actions based on the selected option
     switch(selectedValue) {
         case "consolidate":

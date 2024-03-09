@@ -1,5 +1,21 @@
-#output {
-    margin-top: 20px;
+#rectangle{
+    width:200px;
+    height:100px;
+    background:green;
+    position: relative;
+    margin: 2ch;
+}
+#tableOptions{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -1.5ch;
+    text-indent: -2ch; 
+    padding-top: 1ch;
+    padding-bottom: 1;
+    text-align: justify;
+    position: absolute;
+    right: 10px;
+    top: 5px;
 }
 
 /* Styles for different options */
@@ -9,4 +25,8 @@
 
 .Consolidate {
     color: green;
+}
+
+#popup {
+    visibility: hidden;
 }
