@@ -6,9 +6,9 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(18, GPIO.OUT)
 
-@app.route('/')
-def index():
-    return 'Hello world'
+# @app.route('/')
+# def index():
+#     return 'Hello world'
 
 @app.route('/',methods=['GET'])
 def test():
