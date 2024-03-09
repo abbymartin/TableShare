@@ -12,7 +12,7 @@
     <div id="topBar">
         <img id="logo" src="Se.png"><h1 id="logolabel">TableShare</h1>
         <div id="room">
-            <button id="roomBtn">Room V</button>
+            <button id="roomBtn" onClick="swapRoom()">Room V</button>
         </div>
     </div>
  
@@ -26,6 +26,7 @@
             <div class="centered">
                 <div class="top">
                     <h2>Occupy table</h2>
+                    <hr>
                     <div class="tableProperty">
                         <label for="status">Status: </label>
                             <select id="status" >
@@ -37,7 +38,7 @@
                             <input type = "text" id="textboxnote" name="note"><br><br>
                         <p> 
                             <div id ="submitWrap">
-                                <button onclick="setTable()"> Submit</button>
+                                <button id="submit" onclick="setTable()"> Submit</button>
                             </div>
                         </p> 
                     </div>

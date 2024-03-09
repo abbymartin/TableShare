@@ -58,13 +58,7 @@ box-shadow: 0 3px 5px -3px #000;
     bottom: 0cap;
     display: inline;
   }
-  #popup,.split, #roomWrap{
-    position: relative;
-    display: inline-block;
-    zoom: 1;
-    vertical-align: middle;
-    height: 100%;
-  }
+ 
   
   
 #roomDiagram {
@@ -79,9 +73,9 @@ box-shadow: 0 3px 5px -3px #000;
 
 .split {
     height: 100%;
-    width: 20vw;
-    position: fixed;
+    width: 24vw;
     z-index: 1;
+    position: fixed;
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
@@ -89,16 +83,14 @@ box-shadow: 0 3px 5px -3px #000;
 
 .right {
     right: 0;
-    background-color: grey;
+    background-color: whitesmoke ;
 }
-
 .centered {
-    position: absolute;
     top: 10%;
+    position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-
 }
 
 .tableProperty {
@@ -106,6 +98,7 @@ box-shadow: 0 3px 5px -3px #000;
     position: absolute;
     text-align: left;
 }
+
 #status{
     border-radius: 20%;
   }  
@@ -121,8 +114,8 @@ box-shadow: 0 3px 5px -3px #000;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  #submit{
+}
+#submit{
     width: 140px;
     height: 45px;
     font-family: 'Roboto', sans-serif;
