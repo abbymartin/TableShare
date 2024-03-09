@@ -4,6 +4,7 @@ import RPi.GPIO as GPIO
 
 app = Flask(__name__)
 socketio = SocketIO(app,debug=True,cors_allowed_origins='*',async_mode='eventlet')
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(18, GPIO.OUT)
@@ -11,7 +12,7 @@ GPIO.setup(18, GPIO.OUT)
 #stored room layouts
 tables = {
     table1: {
-
+        
     },
     table2: {},
     table3: {},
@@ -30,6 +31,26 @@ def test():
     else:
         return "uh oh"
 
+@socketio.on("update_table")
+def store_data:
+    return "wow!"
+
+@socketio.on('connect')
+def connect():
+    global thread
+    print('Client connected')
+
+    global thread
+    with thread_lock:
+        if thread is None:
+            thread = socketio.start_background_task(background_thread)
+
+"""
+Decorator for disconnect
+"""
+@socketio.on('disconnect')
+def disconnect():
+    print('Client disconnected',  request.sid)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    socketio.run(app)
