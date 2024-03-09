@@ -17,8 +17,7 @@ function handleSelection() {
         default:
             // Default action
             table.style.color = "red";
-            table.textContent = "Unknown option selected";
-           
+            table.textContent = "Unknown option selected";     
     }
     popup.style.visibility = "hidden";
 }
