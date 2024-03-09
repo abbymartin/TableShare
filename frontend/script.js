@@ -3,7 +3,7 @@ function popUp() {
     popup.classList.toggle("show");
 }
 
-  const myDiagram =
+  const diagram =
   new go.Diagram("roomDiagram",
     { 
       "draggingTool.isEnabled": false,
@@ -15,8 +15,10 @@ function popUp() {
       "allowZoom": false
     });
 
+diagram.grid.visible = true;
+
 // define a simple Node template
-myDiagram.nodeTemplate =
+diagram.nodeTemplate =
   new go.Node("Horizontal",
     // the entire node will have a light-blue background
     { background: "#44CCFF" })
@@ -25,7 +27,7 @@ myDiagram.nodeTemplate =
         { margin: 12, stroke: "white", font: "bold 16px sans-serif" })
         .bind("text", "tableNum"));
 
-myDiagram.model = new go.Model(
+diagram.model = new go.Model(
   [ //layout
 
     { tableNum: "1"},
