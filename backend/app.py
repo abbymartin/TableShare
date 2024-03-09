@@ -1,22 +1,11 @@
 from flask import Flask, request
-from flask_socketio import SocketIO
 import RPi.GPIO as GPIO
 
 app = Flask(__name__)
-socketio = SocketIO(app,debug=True,cors_allowed_origins='*',async_mode='eventlet')
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(18, GPIO.OUT)
 
-#stored room layouts
-tables = {
-    table1: {
-
-    },
-    table2: {},
-    table3: {},
-    table4:{}
-}
 
 @app.route('/',methods=['GET'])
 def test():
