@@ -16,7 +16,7 @@ def test():
     if status == "on":
         GPIO.output(18, GPIO.HIGH)
         return "light on"
-    elif status == "off"
+    elif status == "off":
         GPIO.output(18, GPIO.LOW)
         return "light off"
     else:
