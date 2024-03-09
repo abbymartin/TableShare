@@ -1,9 +1,9 @@
 currentTableID = 0
 
-function popUp() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-}
+// function popUp() {
+//     var popup = document.getElementById("myPopup");
+//     popup.classList.toggle("show");
+// }
   const $ = go.GraphObject.make;
 
   const diagram =
@@ -33,6 +33,7 @@ function handleClick(id, obj) {
   currentTableID = id;
   document.getElementById("roomDiagram").style.width = "80vw"
   toggleColor(id-1);
+  popup();
 }
 
 function tableStyle() {
@@ -122,13 +123,13 @@ diagram.model = new go.GraphLinksModel(
 
   function setTable() {
     var popup = document.getElementById("popup");
-    tables.table1.status = document.getElementById("status").value;
-    tables.table1.notes = document.getElementById("textboxnote").value;
-    if (tables.table1.status == 'consolidate') {
-        tables.table1.lightOn = true;
-    }
+    // tables.table1.status = document.getElementById("status").value;
+    // tables.table1.notes = document.getElementById("textboxnote").value;
+    // if (tables.table1.status == 'consolidate') {
+    //     tables.table1.lightOn = true;
+    // }
+    document.getElementById("roomDiagram").style.width = "100vw";
     popup.style.visibility = "hidden";
-
 }
 
 function popup() {
