@@ -10,7 +10,7 @@
 
 .split {
     height: 100%;
-    width: 25%;
+    width: 25vw;
     position: fixed;
     z-index: 1;
     top: 0;
