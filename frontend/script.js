@@ -38,12 +38,14 @@ let tables = {
 // to change attribute
 // tables.table4.notes = "skldfjldsf"; (i think ?)
 function setTable() {
-    //var table = document.getElementById(tableID);
+    var popup = document.getElementById("popup");
     tables.table1.status = document.getElementById("status").value;
     tables.table1.notes = document.getElementById("textboxnote").value;
     if (tables.table1.status == 'consolidate') {
         tables.table1.lightOn = true;
     }
+    popup.style.visibility = "hidden";
+
 }
 
 
@@ -72,8 +74,7 @@ function setTable() {
 //     popup.style.visibility = "hidden";
 // }
 
-// function popup() {
-//     var popup = document.getElementById("popup");
-//     popup.style.visibility = "visible";
-
-// }
+function popup() {
+    var popup = document.getElementById("popup");
+    popup.style.visibility = "visible";
+}

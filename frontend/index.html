@@ -13,18 +13,8 @@
 <p>To consolidate or not</p>
 
 <body>
-    <div id = "popup"> 
-    <form action="/action_page.php">
-    <label for="occupy">Occupy table:</label>
-    <select id="occupancy" onChange ="handleSelection()">
-      <option value="consolidate">yay join me</option>
-      <option value="notConsolidate">ew get away</option>
-    </select>
-
-  </form>
-</div>
-
-<!-- <div id="room">
+    
+<div id="room">
     <div id="table"><table>
         <tr>
             <th><div id="rectangle"><button id="tableOptions"onClick="popup()">...</button></div></th>
@@ -34,29 +24,30 @@
             <th><div id="rectangle"><button id="tableOptions"onClick="popup()">...</button></div></th>
         </tr>
     </table></div>
-</div> -->
-
-<div class="split right">
-    <div class="centered">
-        <div class="top">
-            <h2>Occupy table</h2>
-            <div class="tableProperty">
-                <label for="status">Status: </label>
-                    <select id="status" >
-                        <option value="empty">empty</option>
-                        <option value="consolidate">yay join me</option>
-                        <option value="notConsolidate">ew get away</option>
-                    </select>
-                <label for="note">Note: </label>
-                    <input type = "text" id="textboxnote" name="note"><br><br>
-                <p> 
-                    <button onclick="setTable()"> Submit</button>
-                </p> 
-            </div>
-         </div>   
-    </div>
-
 </div>
+
+    <div id = "popup"> 
+        <div class="split right">
+            <div class="centered">
+                <div class="top">
+                    <h2>Occupy table</h2>
+                    <div class="tableProperty">
+                        <label for="status">Status: </label>
+                            <select id="status" >
+                                <option value="empty">Empty</option>
+                                <option value="consolidate">Available</option>
+                                <option value="notConsolidate">Not Available</option>
+                            </select>
+                        <label for="note">Note: </label>
+                            <input type = "text" id="textboxnote" name="note"><br><br>
+                        <p> 
+                            <button onclick="setTable()"> Submit</button>
+                        </p> 
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
 
 
 </body>
