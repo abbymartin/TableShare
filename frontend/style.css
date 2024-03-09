@@ -1,0 +1,12 @@
+#output {
+    margin-top: 20px;
+}
+
+/* Styles for different options */
+.notConsolidate {
+    color: red;
+}
+
+.Consolidate {
+    color: green;
+}
