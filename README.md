@@ -1,5 +1,27 @@
-## Read me
-A simple website that decreases space inefficiency and increase sense of community amongst students by allowing students to consolidate easily.
+# 🦆 TableShare
 
-## Setup
-Click on the website. Navigate to a specific area using the toggle button. If you are looking to see if the seats in a table are open, each table is indicated with color green or red based on its availability, along with a specific note. If you claim an empty table, you can either mark it as available or unavailable, based on your preference. Before you leave, make sure you mark the table as available!
+W@CC Hackathon PRoject
+------------------------------------------
+⭐Abby Martin
+⭐Annabelle Lee
+⭐Jessica Liu
+⭐Christine Kim
+
+## 💁 Description
+TableShare offers a solution to the community by allowing students to indicate whether open to other students joining them at their table. Not only does this optimize the use of existing space, it creates a sense of community and promotes collaboration. Students have the chance to meet students they might not otherwise encounter!
+
+
+*CHECK OUT OUR WEBSITE!
+
+## ⏰  Features:
+* Table Assignment: Allow users to assign guests to specific tables, with the ability to create, name, and customize tables according to the venue setup.
+* Real-Time Updates: Enable real-time updates and synchronization across multiple devices so that changes made by one user reflect instantly for others involved in event planning.
+* Guest Profiles: Create profiles for each guest, including details such as dietary restrictions, special accommodations, or seating preference
+
+
+## 💻 Technologies Used:
+* JavaScript, HTML, CSS, RasberryPi,
+* 
+
+
+
