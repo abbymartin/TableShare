@@ -1,70 +1,94 @@
-#rectangle{
-    width:200px;
-    height:100px;
-    background:green;
-    position: relative;
-    margin: 2ch;
+.cabin-condensed-medium {
+  font-family: "Cabin Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
-#tableOptions{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    letter-spacing: -1.5ch;
-    text-indent: -2ch; 
-    padding-top: 1ch;
-    padding-bottom: 1;
-    text-align: justify;
-    position: absolute;
-    right: 10px;
-    top: 5px;
+body{
+  margin: 0;
 }
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+#hh{
+  z-index: 1;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0 3px 5px -3px #000;
+  -moz-box-shadow: 0 3px 5px -3px #000;
+  box-shadow: 0 3px 5px -3px #000;
+  top: 0px;
+}
+#logo, #logolabel, #room {
+  display: inline-block;
+  zoom: 1;
+  height: 100%;
+  vertical-align: middle;
+}
+#logo{
+  padding: 10px;
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+}
+#room{
+  padding-left: 70%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#roomBtn{
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
   }
-  
-  /* The actual popup (appears on top) */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+#roomBtn:hover {
+  background-color: gray;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#outer{
+  vertical-align: bottom;
+}
+#popup, #tables{
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  height: 100%;
+}
+#bottom{
+  position: relative;
+  height: 100%;
+  bottom: 0cap;
+  display: inline;
+}
+#popup{
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  overflow: auto;
+  background-color: antiquewhite;
+  width: 30%;
+  text-align: center;
+  bottom: 0%;
+  vertical-align: middle;
+  bottom: auto;
+}
+#tables{
+  margin-left: 30%;
+  padding-left: 20px;
+  width: 70%;
+  background-color:red;
+  overflow: auto;
+}
