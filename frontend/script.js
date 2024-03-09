@@ -40,7 +40,7 @@ function changeColor(id, on) {
 
 function handleClick(id, obj) {
   currentTableID = id-1;
-  document.getElementById("roomDiagram").style.width = "80vw"
+  document.getElementById("roomDiagram").style.width = "75vw"
   popup();
 }
 
@@ -110,21 +110,21 @@ $(go.Node, "Spot", tableStyle(),
 
 diagram.model = new go.GraphLinksModel(
   [ //layout
-    { "key": 1, "category": "Square Table", "name": "1", "loc": "20 100"},
-    { "key": 2, "category": "Square Table", "name": "2", "loc": "20 300" },
-    { "key": 3, "category": "Square Table", "name": "3", "loc": "20 500" },
-    { "key": 4, "category": "Square Table", "name": "4", "loc": "20 700" },
+    { "key": 1, "category": "Square Table", "name": "1", "loc": "20 175"},
+    { "key": 2, "category": "Square Table", "name": "2", "loc": "20 325" },
+    { "key": 3, "category": "Square Table", "name": "3", "loc": "20 475" },
+    { "key": 4, "category": "Square Table", "name": "4", "loc": "20 625" },
     
     { "key": 5, "category": "Circle Table", "name": "5", "loc": "200 250" },
     { "key": 6, "category": "Circle Table", "name": "6", "loc": "200 550" },
 
-    { "key": 7, "category": "Circle Table", "name": "6", "loc": "670 250" },
-    { "key": 8, "category": "Circle Table", "name": "7", "loc": "670 550" },
+    { "key": 7, "category": "Circle Table", "name": "6", "loc": "620 250" },
+    { "key": 8, "category": "Circle Table", "name": "7", "loc": "620 550" },
 
-    { "key": 9, "category": "Square Table", "name": "8", "loc": "850 175" },
-    { "key": 10, "category": "Square Table", "name": "9", "loc": "850 325" },
-    { "key": 11, "category": "Square Table", "name": "10", "loc": "850 475" },
-    { "key": 12, "category": "Square Table", "name": "11", "loc": "850 625" },
+    { "key": 9, "category": "Square Table", "name": "8", "loc": "800 175" },
+    { "key": 10, "category": "Square Table", "name": "9", "loc": "800 325" },
+    { "key": 11, "category": "Square Table", "name": "10", "loc": "800 475" },
+    { "key": 12, "category": "Square Table", "name": "11", "loc": "800 625" },
   ]);
 
   function setTable() {
