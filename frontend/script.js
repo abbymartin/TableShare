@@ -5,6 +5,16 @@ currentTableID = 0
 //     popup.classList.toggle("show");
 // }
   const $ = go.GraphObject.make;
+  let tables = [];
+
+  function populateInfo(roomSize) {
+    for(let i = 0; i < roomSize; i++) {
+      //populate array with default table info
+      tables.push({"status":"empty", "notes":""})
+    }
+  }
+
+  populateInfo(12);
 
   const diagram =
   new go.Diagram("roomDiagram",
@@ -19,20 +29,18 @@ currentTableID = 0
     });
 
 
-
-function toggleColor(id) {
+function changeColor(id, on) {
   var model = diagram.model;
   // all model changes should happen in a transaction
   model.startTransaction("toggleColor");
   var data = model.nodeDataArray[id];  // get the first node data
-  model.setDataProperty(data, "available", !data.available);
+  model.setDataProperty(data, "available", on);
   model.commitTransaction("toggleColor");
 }    
 
 function handleClick(id, obj) {
-  currentTableID = id;
+  currentTableID = id-1;
   document.getElementById("roomDiagram").style.width = "80vw"
-  toggleColor(id-1);
   popup();
 }
 
@@ -100,10 +108,9 @@ $(go.Node, "Spot", tableStyle(),
 ));
 
 
-
 diagram.model = new go.GraphLinksModel(
   [ //layout
-    { "key": 1, "category": "Square Table", "name": "1", "loc": "20 100", "fill": "lightblue" },
+    { "key": 1, "category": "Square Table", "name": "1", "loc": "20 100"},
     { "key": 2, "category": "Square Table", "name": "2", "loc": "20 300" },
     { "key": 3, "category": "Square Table", "name": "3", "loc": "20 500" },
     { "key": 4, "category": "Square Table", "name": "4", "loc": "20 700" },
@@ -122,18 +129,32 @@ diagram.model = new go.GraphLinksModel(
   ]);
 
   function setTable() {
-    var popup = document.getElementById("popup");
-    // tables.table1.status = document.getElementById("status").value;
-    // tables.table1.notes = document.getElementById("textboxnote").value;
-    // if (tables.table1.status == 'consolidate') {
-    //     tables.table1.lightOn = true;
-    // }
+    let popup = document.getElementById("popup");
+
+    tables[currentTableID].status =  document.getElementById("status").value;
+    tables[currentTableID].notes = document.getElementById("textboxnote").value;
+
+    if(tables[currentTableID].status === "available" || tables[currentTableID].status === "empty") {
+      changeColor(currentTableID, false); //change color to green
+    }
+    else {
+      changeColor(currentTableID, true); //change color to red
+    }
+
+
     document.getElementById("roomDiagram").style.width = "100vw";
     popup.style.visibility = "hidden";
+
+    console.log(tables);
 }
 
 function popup() {
     var popup = document.getElementById("popup");
+
+    //autofill fields
+    document.getElementById("status").value = tables[currentTableID].status;
+    document.getElementById("textboxnote").value = tables[currentTableID].notes;
+
     popup.style.visibility = "visible";
 }
 
