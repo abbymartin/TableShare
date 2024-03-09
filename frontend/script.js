@@ -32,8 +32,7 @@ function toggleColor(id) {
 function handleClick(id, obj) {
   currentTableID = id;
   document.getElementById("roomDiagram").style.width = "80vw"
-  document.getElementById("popup").style.display = "block";
-  toggleColor(id - 1);
+  toggleColor(id-1);
 }
 
 function tableStyle() {
@@ -120,3 +119,16 @@ diagram.model = new go.GraphLinksModel(
     { "key": 11, "category": "Square Table", "name": "10", "loc": "1600 500" },
     { "key": 12, "category": "Square Table", "name": "11", "loc": "1600 700" },
   ]);
+
+  function setTable() {
+    var popup = document.getElementById("popup");
+    tables.table1.status = document.getElementById("status").value;
+    tables.table1.notes = document.getElementById("textboxnote").value;
+    if (tables.table1.status == 'consolidate') {
+        tables.table1.lightOn = true;
+    }
+    popup.style.visibility = "hidden";
+
+}
+
+
