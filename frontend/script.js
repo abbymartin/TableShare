@@ -56,6 +56,10 @@ $(go.Node, "Spot", tableStyle(),
   ),
 ));
 
+function test(id) {
+  console.log(id);
+}
+
 // CIRCLE TABLE
 diagram.nodeTemplateMap.add("Circle Table",
 $(go.Node, "Spot", tableStyle(),
@@ -65,11 +69,7 @@ $(go.Node, "Spot", tableStyle(),
       new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
       new go.Binding("fill"),
       {
-        click: (e, obj) => showMessage("Clicked on " + obj.part.data.key),
-        selectionChanged: part => {
-            var shape = part.elt(0);
-            shape.fill = part.isSelected ? "red" : "white";
-          }
+        click: (e, obj) => test(obj.part.data.key)
       }),
       
     $(go.TextBlock, { editable: true, font: "bold 11pt Verdana, sans-serif" },
