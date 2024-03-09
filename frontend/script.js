@@ -75,7 +75,7 @@ diagram.nodeTemplateMap.add("Square Table",
 $(go.Node, "Spot", tableStyle(),
   $(go.Panel, "Spot",
     $(go.Shape, "Rectangle",
-      { name: "TABLESHAPE", desiredSize: new go.Size(150, 150), fill: "green", stroke: null },
+      { name: "TABLESHAPE", desiredSize: new go.Size(100, 100), fill: "green", stroke: null },
       new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
       new go.Binding("fill", "available", function(v) { return v ? "red" : "green"; }),
       {
@@ -94,7 +94,7 @@ diagram.nodeTemplateMap.add("Circle Table",
 $(go.Node, "Spot", tableStyle(),
   $(go.Panel, "Spot",
     $(go.Shape, "Circle",
-      { name: "TABLESHAPE", desiredSize: new go.Size(200, 200), fill: "green", stroke: null },
+      { name: "TABLESHAPE", desiredSize: new go.Size(150, 150), fill: "green", stroke: null },
       new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
       new go.Binding("fill", "available", function(v) { return v ? "red" : "green"; }),
       {
@@ -115,17 +115,16 @@ diagram.model = new go.GraphLinksModel(
     { "key": 3, "category": "Square Table", "name": "3", "loc": "20 500" },
     { "key": 4, "category": "Square Table", "name": "4", "loc": "20 700" },
     
+    { "key": 5, "category": "Circle Table", "name": "5", "loc": "200 250" },
+    { "key": 6, "category": "Circle Table", "name": "6", "loc": "200 550" },
 
-    { "key": 5, "category": "Circle Table", "name": "5", "loc": "300 250" },
-    { "key": 6, "category": "Circle Table", "name": "6", "loc": "300 550" },
+    { "key": 7, "category": "Circle Table", "name": "6", "loc": "670 250" },
+    { "key": 8, "category": "Circle Table", "name": "7", "loc": "670 550" },
 
-    { "key": 7, "category": "Circle Table", "name": "6", "loc": "1320 250" },
-    { "key": 8, "category": "Circle Table", "name": "7", "loc": "1320 550" },
-
-    { "key": 9, "category": "Square Table", "name": "8", "loc": "1600 100" },
-    { "key": 10, "category": "Square Table", "name": "9", "loc": "1600 300" },
-    { "key": 11, "category": "Square Table", "name": "10", "loc": "1600 500" },
-    { "key": 12, "category": "Square Table", "name": "11", "loc": "1600 700" },
+    { "key": 9, "category": "Square Table", "name": "8", "loc": "850 175" },
+    { "key": 10, "category": "Square Table", "name": "9", "loc": "850 325" },
+    { "key": 11, "category": "Square Table", "name": "10", "loc": "850 475" },
+    { "key": 12, "category": "Square Table", "name": "11", "loc": "850 625" },
   ]);
 
   function setTable() {
