@@ -8,8 +8,8 @@ GPIO.setup(18, GPIO.OUT)
 
 @app.route('/')
 def index():
-    GPIO.output(18, GPIO.HIGH)
     return 'Hello world'
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+    GPIO.output(18, GPIO.HIGH)
