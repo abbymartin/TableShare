@@ -12,7 +12,7 @@ function popUp() {
       "draggingTool.isEnabled": false,
       "panningTool.isEnabled": false,
       "dragSelectingTool.isEnabled": false,
-      "maxSelectionCount": 1,
+      "maxSelectionCount": 0,
       "allowHorizontalScroll": false,
       "allowVerticalScroll": false,
       "allowZoom": false
@@ -33,10 +33,6 @@ function handleClick(id, obj) {
   currentTableID = id;
   document.getElementById("roomDiagram").style.width = "80vw"
   toggleColor(id-1);
-
-  //var data = diagram.model.nodeDataArray[0];  // get the first node data
-  // model.setDataProperty(fill, "red");
-  //open sidebar
 }
 
 function tableStyle() {
@@ -55,7 +51,10 @@ $(go.Node, "Spot", tableStyle(),
     $(go.Shape, "Rectangle",
       { name: "TABLESHAPE", desiredSize: new go.Size(160, 80), fill: "green", stroke: null },
       new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
-      new go.Binding("fill")),
+      new go.Binding("fill", "available", function(v) { return v ? "red" : "green"; }),
+      {
+        click: (e, obj) => handleClick(obj.part.data.key, obj)
+      }),
     $(go.TextBlock, { editable: true, font: "bold 11pt Verdana, sans-serif" },
       new go.Binding("text", "name").makeTwoWay(),
       new go.Binding("angle", "angle", n => -n))
@@ -69,7 +68,10 @@ $(go.Node, "Spot", tableStyle(),
     $(go.Shape, "Rectangle",
       { name: "TABLESHAPE", desiredSize: new go.Size(150, 150), fill: "green", stroke: null },
       new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
-      new go.Binding("fill")),
+      new go.Binding("fill", "available", function(v) { return v ? "red" : "green"; }),
+      {
+        click: (e, obj) => handleClick(obj.part.data.key, obj)
+      }),
     $(go.TextBlock, { editable: true, font: "bold 11pt Verdana, sans-serif" },
       new go.Binding("text", "name").makeTwoWay(),
       new go.Binding("angle", "angle", n => -n))
@@ -85,7 +87,7 @@ $(go.Node, "Spot", tableStyle(),
     $(go.Shape, "Circle",
       { name: "TABLESHAPE", desiredSize: new go.Size(200, 200), fill: "green", stroke: null },
       new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
-      new go.Binding("fill", "available", function(v) { return v ? "green" : "red"; }),
+      new go.Binding("fill", "available", function(v) { return v ? "red" : "green"; }),
       {
         click: (e, obj) => handleClick(obj.part.data.key, obj)
       }),
