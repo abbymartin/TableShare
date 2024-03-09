@@ -6,11 +6,11 @@ function handleSelection() {
     // Perform actions based on the selected option
     switch(selectedValue) {
         case "consolidate":
-            // Action for option 1
+            // Action for consolidating
             table.style.color = "green";
             break;
         case "notConsolidate":
-            // Action for option 2
+            // Action for not consolidate
             table.style.color = "red"
             break;
         default:
