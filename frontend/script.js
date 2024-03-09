@@ -22,7 +22,7 @@ myDiagram.nodeTemplate =
     { background: "#44CCFF" })
     .add(new go.TextBlock(
         "",  //default value
-        { margin: 12, stroke: "white", font: "bold 16px sans-serif" })
+        { margin: 12, width: 200, height: 100, stroke: "white", font: "bold 16px sans-serif", textAlign: "center", verticalAlignment: go.Spot.Center })
         .bind("text", "tableNum"));
 
 myDiagram.model = new go.Model(
