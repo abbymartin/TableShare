@@ -1,3 +1,39 @@
+
+//status options: "empty", "available", "unavailable"
+let tables = {
+  table1: {
+    shape: "rectangle",
+    location: "0 0",
+    status: "empty",
+    notes: "",
+    lightOn: false
+  },
+  table2: {
+    shape: "rectangle",
+    location: "0 0",
+    status: "empty",
+    notes: "",
+    lightOn: false
+  },
+  table3: {
+    shape: "rectangle",
+    location: "0 0",
+    status: "empty",
+    notes: "",
+    lightOn: false
+  },
+  table4: {
+    shape: "rectangle",
+    location: "0 0",
+    status: "empty",
+    notes: "",
+    lightOn: false
+  }
+}
+
+//to change attribute
+// tables.table4.notes = "skldfjldsf"; (i think ?)
+
 function handleSelection() {
     var selectElement = document.getElementById("occupancy");
     var selectedValue = selectElement.value;
@@ -21,7 +57,6 @@ function handleSelection() {
     }
     popup.style.visibility = "hidden";
 }
-
 
 function popup() {
     var popup = document.getElementById("popup");
