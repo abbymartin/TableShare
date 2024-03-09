@@ -131,4 +131,9 @@ diagram.model = new go.GraphLinksModel(
 
 }
 
+function popup() {
+    var popup = document.getElementById("popup");
+    popup.style.visibility = "visible";
+}
+
 
