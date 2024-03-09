@@ -32,7 +32,8 @@ function toggleColor(id) {
 function handleClick(id, obj) {
   currentTableID = id;
   document.getElementById("roomDiagram").style.width = "80vw"
-  toggleColor(id-1);
+  document.getElementById("popup").style.display = "block";
+  toggleColor(id - 1);
 }
 
 function tableStyle() {
@@ -119,9 +120,3 @@ diagram.model = new go.GraphLinksModel(
     { "key": 11, "category": "Square Table", "name": "10", "loc": "1600 500" },
     { "key": 12, "category": "Square Table", "name": "11", "loc": "1600 700" },
   ]);
-
-  function changeColor(key, color) {
-
-  }
-
-
