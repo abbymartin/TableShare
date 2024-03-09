@@ -24,7 +24,7 @@
   </form>
 </div>
 
-<div id="room">
+<!-- <div id="room">
     <div id="table"><table>
         <tr>
             <th><div id="rectangle"><button id="tableOptions"onClick="popup()">...</button></div></th>
@@ -34,7 +34,7 @@
             <th><div id="rectangle"><button id="tableOptions"onClick="popup()">...</button></div></th>
         </tr>
     </table></div>
-</div>
+</div> -->
 
 <div class="split right">
     <div class="centered">
@@ -49,13 +49,8 @@
                     </select>
                 <label for="note">Note: </label>
                     <input type = "text" id="textboxnote" name="note"><br><br>
-                <label for="lightOn">Light: </label>
-                    <select id="share">
-                        <option value="on">On</option>
-                        <option value="off">Off</option>
-                    </select>
                 <p> 
-                    <input type="submit" value="Submit">
+                    <button onclick="setTable()"> Submit</button>
                 </p> 
             </div>
          </div>   
