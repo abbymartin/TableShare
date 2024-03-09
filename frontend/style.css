@@ -30,3 +30,46 @@
 #popup {
     visibility: hidden;
 }
+
+.split {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+.right {
+    right: 0;
+    background-color: grey;
+}
+
+.centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.tableProperty {
+    font-size: 20px;
+    position: absolute;
+    text-align: left;
+}
+
+#textboxnote {
+    height:100px;
+    font-size:10pt;
+    text-align: left;
+}
+
+/* label { 
+    display:block;
+} */
+
+
+

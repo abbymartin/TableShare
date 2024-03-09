@@ -22,6 +22,8 @@ function handleSelection() {
     }
     popup.style.visibility = "hidden";
 }
+
+
 function popup() {
     var popup = document.getElementById("popup");
     popup.style.visibility = "visible";
