@@ -100,8 +100,15 @@ diagram.model = new go.GraphLinksModel(
     { "key": 12, "category": "Square Table", "name": "11", "loc": "1600 700" },
   ]);
 
-  function changeColor(key, color) {
+  function setTable() {
+    var popup = document.getElementById("popup");
+    tables.table1.status = document.getElementById("status").value;
+    tables.table1.notes = document.getElementById("textboxnote").value;
+    if (tables.table1.status == 'consolidate') {
+        tables.table1.lightOn = true;
+    }
+    popup.style.visibility = "hidden";
 
-  }
+}
 
 
