@@ -1,3 +1,5 @@
+currentTableID = 0
+
 function popUp() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
@@ -16,8 +18,18 @@ function popUp() {
       "allowZoom": false
     });
 
-var div = diagram.div;
-div.style.width = '2000px';
+
+function handleClick(id, obj) {
+  currentTableID = id;
+  document.getElementById("roomDiagram").style.width = "80vw"
+  //DOESNT WORK
+  let shape = obj.part.elt(0);
+  shape.fill = "red";
+  //open sidebar
+}
+
+
+
 
 function tableStyle() {
   return [
@@ -56,9 +68,7 @@ $(go.Node, "Spot", tableStyle(),
   ),
 ));
 
-function test(id) {
-  console.log(id);
-}
+
 
 // CIRCLE TABLE
 diagram.nodeTemplateMap.add("Circle Table",
@@ -69,7 +79,7 @@ $(go.Node, "Spot", tableStyle(),
       new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
       new go.Binding("fill"),
       {
-        click: (e, obj) => test(obj.part.data.key)
+        click: (e, obj) => handleClick(obj.part.data.key, obj)
       }),
       
     $(go.TextBlock, { editable: true, font: "bold 11pt Verdana, sans-serif" },
