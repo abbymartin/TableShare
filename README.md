@@ -1,6 +1,6 @@
 # 🦆 TableShare
 
-W@CC Hackathon PRoject
+W@CC 8 Hour Hackathon Project
 ------------------------------------------
 ⭐Abby Martin
 ⭐Annabelle Lee
@@ -12,8 +12,6 @@ TableShare offers a solution to the community by allowing students to indicate w
 
 ## 💻 Technologies Used:
 * JavaScript, HTML, CSS, GoJS
-* Webserver on RasberryPi,
-* 
 
 
 
